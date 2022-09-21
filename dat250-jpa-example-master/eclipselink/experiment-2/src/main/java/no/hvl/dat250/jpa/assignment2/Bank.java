@@ -1,11 +1,10 @@
 package no.hvl.dat250.jpa.assignment2;
 
-import lombok.Data;
+
 
 import javax.persistence.*;
 import java.util.Set;
 
-@Data
 @Entity
 public class Bank {
     @Id
@@ -16,4 +15,24 @@ public class Bank {
 
     @OneToMany(mappedBy = "owningBank")
     public Set<CreditCard> ownedCards;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<CreditCard> getOwnedCards() {
+        return ownedCards;
+    }
+
+    public void setOwnedCards(Set<CreditCard> ownedCards) {
+        this.ownedCards = ownedCards;
+    }
 }

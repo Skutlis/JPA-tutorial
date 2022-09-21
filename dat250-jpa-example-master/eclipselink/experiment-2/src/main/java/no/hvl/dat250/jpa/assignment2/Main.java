@@ -2,13 +2,13 @@ package no.hvl.dat250.jpa.assignment2;
 
 
 import java.util.HashSet;
-import java.util.List;
+
 import java.util.Set;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
+
 
 public class Main {
     private static final String PERSISTENCE_UNIT_NAME = "experiment2";
